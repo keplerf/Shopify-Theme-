@@ -7,8 +7,12 @@ assets/arrows-2.png:
   development: 2018-01-11T23:14:16-05:00   4d2ed50facf20fdc9206e65be96097d6
 assets/arrows.png:
   development: 2018-01-11T23:14:16-05:00   09b24f1a73b9eeb5cc62db7ec0b60bca
-assets/banner-matress-topper-montreal-linnens.jpg:
-  development: 2018-01-15T23:21:21-05:00   c5ef59ba099c9cdd57cc8bab6ec468ba
+assets/banner-contact.jpg:
+  development: 2018-04-09T22:39:36-04:00   1a56e9ec327c83304436bffafc032ae2
+assets/banner-matress-topper-montreal-linnens-new.jpg:
+  development: 2018-04-09T21:35:07-04:00   bd60a2aa8089823f39b757f0ef35b2da
+assets/banner-matress-topper-montreal-linnens-new2.jpg:
+  development: 2018-04-09T21:36:30-04:00   ca7b41968be93e368c9e077932249f24
 assets/bullets-2.png:
   development: 2018-01-11T23:14:17-05:00   208e649ac5a7e0daf2023e30d92f675e
 assets/bullets.png:
@@ -19,12 +23,20 @@ assets/gift-card.scss.liquid:
   development: 2018-01-11T03:26:03-05:00   b7db803a41522825e2c6244a55e8ba89
 assets/ico-select.svg.liquid:
   development: 2018-01-11T03:26:03-05:00   fb3d8f5b83dfa47b06b28064fbbfc380
+assets/insta.js:
+  development: 2018-02-22T00:39:33-05:00   eb354fecea18e1d15bf2d19f18b09416
+assets/instafeed.min.js:
+  development: 2018-02-22T00:19:50-05:00   1b9d5439b41e462220f9e6937df15b60
 assets/lazysizes.js:
   development: 2018-01-11T03:26:03-05:00   c96602ecb5ac14b9bf9068cb8907ce65
 assets/loading-2.gif:
   development: 2018-01-11T23:14:18-05:00   dd6b7b0bf5c3af22499abc0a9ee1e1b2
 assets/loading.gif:
   development: 2018-01-11T23:14:18-05:00   dd6b7b0bf5c3af22499abc0a9ee1e1b2
+assets/logo-black.svg:
+  development: 2018-02-22T22:40:09-05:00   7bc0d000ae1a98271e4b515dd1a840fc
+assets/logo.svg:
+  development: 2018-02-22T21:59:12-05:00   6bc35aed69a009cad34500d818fd88a5
 assets/lyl-logo-black.png:
   development: 2018-01-15T00:25:21-05:00   3f40f56dd3cc40b17ab907f3e797796f
 assets/lyl-logo-white.png:
@@ -33,14 +45,20 @@ assets/match-media.min.js:
   development: 2018-01-11T03:26:03-05:00   0b7a66a7f4044b1929c883738c80386b
 assets/password.js:
   development: 2018-01-11T03:26:03-05:00   7864d107396f6b18a116c16f319afb24
+assets/social-instagram 2.svg:
+  development: 2018-02-22T22:54:18-05:00   2bdf502b30117bf21f9ec2878a5b12d0
+assets/social-instagram.svg:
+  development: 2018-02-22T22:40:21-05:00   2bdf502b30117bf21f9ec2878a5b12d0
+assets/social-pinterest.svg:
+  development: 2018-02-22T22:40:22-05:00   e3cf775ae267ac67f4acee53214e1256
+assets/social-twitter.svg:
+  development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-01-11T03:26:03-05:00   b677b1728bbc05af2658ac001a2e5231
-assets/theme.scss:
-  development: 2018-01-11T23:13:49-05:00   43887d01b6dd72fbdfdc973029ffcf27
+  development: 2018-04-10T11:24:17-04:00   d4f1bfe026c3434b00b443d5cc7228f7
 assets/theme.scss.liquid:
-  development: 2018-01-16T01:19:00-05:00   788a4bb3ae13b2cf15109399a75c60df
+  development: 2018-04-10T12:16:02-04:00   49bc03c4ea157f3f511d873402df040a
 assets/vendor.js:
-  development: 2017-12-08T00:36:53-05:00   cb7c4217c9b6feb844647b361accfe6c
+  development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
   development: 2018-01-11T03:26:03-05:00   27535bc1775d6635a609700914e27e0d
 layout/gift_card.liquid:
@@ -48,7 +66,7 @@ layout/gift_card.liquid:
 layout/password.liquid:
   development: 2017-12-08T00:36:53-05:00   6351674ea67c53e01643a5bea02f7d0a
 layout/theme.liquid:
-  development: 2018-01-15T23:49:59-05:00   06aa3be8b83d106ee4d70a6524c0d124
+  development: 2018-04-10T12:04:58-04:00   99d73010b642c2c3f4ba94d3261021af
 locales/de.json:
   development: 2017-12-08T00:36:53-05:00   b7cd7749b0a0d9df967227ee73bcbb7f
 locales/en.default.json:
@@ -69,12 +87,14 @@ sections/article-template.liquid:
   development: 2018-01-11T03:26:04-05:00   a4f113a7710f00e417d91d9c2df304c2
 sections/blog-template.liquid:
   development: 2018-01-11T03:26:04-05:00   e32c1ed27cddff63ce25af05a529bbfa
+sections/cart-aside-template.liquid:
+  development: 2018-04-10T12:17:23-04:00   405cdd43c2b73a1b2fdc4ab6ac7bc401
 sections/cart-template.liquid:
   development: 2018-01-11T03:26:04-05:00   59d53b9f1fa7446a4e8524d5c959fb07
 sections/collection-list.liquid:
   development: 2018-01-15T12:56:04-05:00   a55d61b95ff71917adad276c41ee1dc0
 sections/collection-template.liquid:
-  development: 2018-01-16T00:30:14-05:00   9c00fd12fa88a8de32151a776fdb7529
+  development: 2018-04-09T21:41:35-04:00   9707303396959dc68170caafa54a3e16
 sections/collection.liquid:
   development: 2017-12-08T00:36:51-05:00   2b354ddc56741c41be0ee62a912b4ce4
 sections/custom-content.liquid:
@@ -90,7 +110,7 @@ sections/featured-product.liquid:
 sections/footer.liquid:
   development: 2018-01-15T01:20:29-05:00   5aad0b30edaf772d7c7f230fd67f1196
 sections/header.liquid:
-  development: 2018-01-12T17:23:15-05:00   59e468b8cc14fba1ca1199491a03fc42
+  development: 2018-02-28T22:10:00-05:00   cbffb43024f0f97cd262c256fa322096
 sections/hero.liquid:
   development: 2018-01-11T03:26:04-05:00   d7ce7b9dbaa78bf494562f4c7c9e3856
 sections/image-bar.liquid:
@@ -110,11 +130,11 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-01-11T03:26:05-05:00   ccc1f51a9ddd61dcda8e8037319c2f87
 sections/product-template.liquid:
-  development: 2018-01-16T01:54:37-05:00   1294bcdb7adee5b2fe13d161aa3008b3
+  development: 2018-02-20T01:42:36-05:00   316e5aae27959a6f028951d2693c24a2
 sections/quotes.liquid:
   development: 2018-01-11T03:26:05-05:00   df3263eeebad4c2cd54683984280dca7
 sections/related-products.liquid:
-  development: 2018-01-16T01:39:34-05:00   4d229f2ce6c288cb90f6c50610e6c1c9
+  development: 2018-02-14T01:09:34-05:00   4d229f2ce6c288cb90f6c50610e6c1c9
 sections/rich-text.liquid:
   development: 2017-12-08T00:36:51-05:00   d25fb0e1575242ba565b129eff3dd1b8
 sections/slideshow.liquid:
@@ -164,13 +184,13 @@ snippets/icon-dogecoin.liquid:
 snippets/icon-dwolla.liquid:
   development: 2017-12-08T00:36:53-05:00   aeb86f67aad84adaf7635d2043cb89a9
 snippets/icon-facebook.liquid:
-  development: 2017-12-08T00:36:53-05:00   334588042b292f2d7335fd2791c35eca
+  development: 2018-02-22T22:44:51-05:00   840060445583c989dd862f29c41f5456
 snippets/icon-forbrugsforeningen.liquid:
   development: 2017-12-08T00:36:53-05:00   ff962a94f23046340766c215b0f14a52
 snippets/icon-hamburger.liquid:
   development: 2017-12-08T00:36:53-05:00   559577e06ff14924311cfe2642e8b765
 snippets/icon-instagram.liquid:
-  development: 2017-12-08T00:36:53-05:00   bf50214819f6e2a5f053593e2414526d
+  development: 2018-02-22T22:54:48-05:00   643500ec5593c6c0d9ad1911200c21f4
 snippets/icon-interac.liquid:
   development: 2017-12-08T00:36:53-05:00   24c4d22a98c0574c32fc02fe39e34b80
 snippets/icon-jcb.liquid:
@@ -196,7 +216,7 @@ snippets/icon-paypal.liquid:
 snippets/icon-pin.liquid:
   development: 2017-12-08T00:36:54-05:00   694162388571d6142ec30bc299d8ac91
 snippets/icon-pinterest.liquid:
-  development: 2017-12-08T00:36:54-05:00   701f2a785b3fa83d63e3ab54af060031
+  development: 2018-02-22T22:49:22-05:00   2eb12967e8d3132a1478d2c812b78d7b
 snippets/icon-play-video.liquid:
   development: 2017-12-08T00:36:54-05:00   f0b736a271f33b83b319b2d04e61aa2b
 snippets/icon-play.liquid:
@@ -218,7 +238,7 @@ snippets/icon-stripe.liquid:
 snippets/icon-tumblr.liquid:
   development: 2017-12-08T00:36:54-05:00   d71a4ada77a8a9b6bd792bdafef393de
 snippets/icon-twitter.liquid:
-  development: 2017-12-08T00:36:54-05:00   24047c22697a23a0baabf2804adc6c11
+  development: 2018-02-22T22:46:41-05:00   bbc8f5be11a9b14a7244fdb41a855f7c
 snippets/icon-vimeo.liquid:
   development: 2017-12-08T00:36:54-05:00   a229ed8a1a81e6ef95ad621f8a34efb6
 snippets/icon-visa.liquid:
@@ -232,17 +252,17 @@ snippets/no-blocks.liquid:
 snippets/pagination.liquid:
   development: 2018-01-11T03:26:03-05:00   f3106d57affe2f8d0015884a5eabfed3
 snippets/product-card-grid.liquid:
-  development: 2018-01-11T03:26:03-05:00   cdd83edf42d18deb31075724869811ad
+  development: 2018-03-06T23:07:17-05:00   86e0d4226173f52e672b253dec1631b0
 snippets/product-card-list.liquid:
   development: 2018-01-11T03:26:03-05:00   a9018c976893214117c02f04fd2c3f7c
 snippets/product-price.liquid:
   development: 2018-01-11T03:26:03-05:00   41d19bc77a984085012480d270bf27f9
 snippets/related-products.liquid:
-  development: 2018-01-16T01:51:56-05:00   6592bc2d77c407977f6c253c06f7e282
+  development: 2018-02-14T01:09:46-05:00   6592bc2d77c407977f6c253c06f7e282
 snippets/search-form.liquid:
   development: 2018-01-11T03:26:03-05:00   4c81bc53a12358591e4950f186825623
 snippets/site-nav.liquid:
-  development: 2017-12-08T00:36:54-05:00   5b28d0e4ef9b072e0240be1b7b8c7b64
+  development: 2018-03-06T23:28:01-05:00   f9d2ca4d3d8fd450b7c968b4338c3271
 snippets/social-meta-tags.liquid:
   development: 2017-12-08T00:36:54-05:00   ae9e213401623b2601abf0ace8e21537
 snippets/social-sharing.liquid:
@@ -274,16 +294,16 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2018-01-11T03:26:04-05:00   746bbea7dc4e244df4f43a48fccb4bc3
 templates/index.liquid:
-  development: 2018-01-11T03:26:04-05:00   b1dfac8c369520b2d32269ccaead64a0
+  development: 2018-02-22T00:26:43-05:00   ebff78634fcbc48789cd65310585fb2c
 templates/list-collections.liquid:
   development: 2018-01-11T03:26:04-05:00   591f0b29e62cb03b2df0139a79b81caa
 templates/page.contact.liquid:
   development: 2018-01-11T03:26:04-05:00   be1d6e8a25fded7d18eeed76cacc37b5
 templates/page.liquid:
-  development: 2018-01-11T03:26:04-05:00   1323607130aa3f37b15d033b013f1d71
+  development: 2018-02-22T00:07:30-05:00   1323607130aa3f37b15d033b013f1d71
 templates/password.liquid:
   development: 2018-01-11T03:26:04-05:00   585b81b68175a78eaff65aea2ca24a71
 templates/product.liquid:
-  development: 2018-01-16T01:56:01-05:00   3ad07d57a08ee464e033ae4fc8cedaa9
+  development: 2018-02-19T23:47:36-05:00   bb96875978d748ee81be1d2100fb3ab6
 templates/search.liquid:
   development: 2018-01-11T03:26:04-05:00   050d6da53d619b718d39535b7d821f22

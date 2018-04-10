@@ -21,7 +21,7 @@
   <header class="collection-header">
 
     {% if section.settings.show_collection_image and collection.image %}
-      <div class="collection-hero">
+      {% comment %} <div class="collection-hero">
         <div class="collection-hero__image ratio-container lazyload js"
              data-bgset="{% include 'bgset', image: collection.image %}"
              data-sizes="auto"
@@ -30,10 +30,14 @@
         <noscript>
           <div class="collection-hero__image" style="background-image: url({{ collection.image | img_url: '2048x600', crop: 'top' }});"></div>
         </noscript>
-        <div class="collection-hero__title-wrapper">
-          <h1 class="collection-hero__title page-width">{{ collection.title }}</h1>
-        </div>
-      </div>
+
+        {% if collection.title != blank %}
+          <div class="collection-hero__title-wrapper">
+            <h1 class="collection-hero__title page-width">{{ collection.title }}</h1>
+          </div>
+        {% endif %}
+        
+      </div> {% endcomment %}
 
       {% if collection.description != blank %}
         <div class="rte collection-description page-width">
@@ -140,6 +144,14 @@
     {% endif %}
   </header>
 
+   <div class="page-width text-center" id="navigation-collection">
+    Show me
+   </div>
+
+   
+
+
+
   <div class="page-width" id="Collection">
     {% if section.settings.layout == 'grid' %}
       {% case section.settings.grid %}
@@ -158,7 +170,19 @@
           <div class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
             {% include 'product-card-grid', max_height: max_height %}
           </div>
+
+        
+          
         {% else %}
+
+        {% for product in collection.products %}
+          <h2> {{ collection.title }} </h2>
+        {% endfor %}
+
+        
+
+       
+
           {% comment %}
           Add default products to help with onboarding for collections/all only.
 
@@ -173,6 +197,7 @@
                     <div class="grid-view-item">
                       <a href="#" class="grid-view-item__link">
                         <div class="grid-view-item__image">
+                        xxss
                           {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
                           {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                         </div>
@@ -187,7 +212,7 @@
               </div>
             </div>
           {% else %}
-            {%- assign is_empty_collection = true -%}
+            <h3> {%- assign is_empty_collection = true -%}</h3>
           {% endif %}
         {% endfor %}
       </div>
@@ -251,6 +276,12 @@
   {
     "name": "Collection pages",
     "settings": [
+       {
+        "type": "link_list",
+        "id": "footer_linklist",
+        "label": "Primary menu",
+        "default": "footer"
+      },
       {
         "type": "select",
         "id": "layout",

@@ -89,7 +89,20 @@
                 </a>
               </li>
             {% endfor %}
+            
           </ul>
+          <div class='product-single-link-urls'>
+           {% for image in product.images %}
+              <a href="{{ image.src | img_url: '540', scale: 1 }}"
+                  class=" product-single__thumbnail--{{ section.id }}"
+                  data-thumbnail-id="{{ image.id }}"
+              > 
+                {{ forloop.index }} </a>
+           {% endfor %}
+           </div>
+           <div class='product-single-link-tbn'>
+             
+            </div>
           {% if enable_thumbnail_slides == true %}
             <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__next thumbnails-slider__next--{{ section.id }}">
               {% include 'icon-chevron-right' %}
@@ -98,6 +111,12 @@
           {% endif %}
         </div>
       {% endif %}
+
+      
+      <div id="shopify-section-related-products-wrapper">
+          <h4 class="header__related-products"> Related Products</h4>
+
+      </div>
     </div>
 
     <div class="grid__item {{ product_description_width }}">
@@ -106,9 +125,9 @@
         <h1 itemprop="name" class="product-single__title">{{ product.title }}</h1>
          
 
-        {% if section.settings.show_vendor %}
+        {% comment %} {% if section.settings.show_vendor %}
           <p itemprop="brand" class="product-single__vendor">{{ product.vendor }}</p>
-        {% endif %}
+        {% endif %} {% endcomment %}
 
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
@@ -140,15 +159,23 @@
           </p>
 
            <div class="product-single__description rte" itemprop="description">
-            {{ product.description }}
+            {% comment %} {{ product.description }} {% endcomment %}
 
+            {{ product.description | split: '~section 2~' | first }}
 
-
-
-    
+           
           </div>
 
           <form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}">
+
+           {% if section.settings.show_quantity_selector %}
+              <div class="product-form__item product-form__item--quantity">
+                <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+                <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
+              </div>
+            {% endif %}
+
+
             {% unless product.has_only_default_variant %}
               {% for option in product.options_with_values %}
                 <div class="selector-wrapper js product-form__item">
@@ -176,53 +203,62 @@
               {% endfor %}
             </select>
 
-            {% if section.settings.show_quantity_selector %}
-              <div class="product-form__item product-form__item--quantity">
-                <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-                <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
+           
+            <div class="selector-wrapper js product-form__item product-submit">
+              <div class="product-form__item product-form__item--submit">
+                <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if product.options.size == 1 and product.variants[0].title == 'Default Title' %} product-form__cart-submit--small{% endif %}">
+                  <span id="AddToCartText-{{ section.id }}">
+                    {% unless current_variant.available %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {% endunless %}
+                  </span>
+                </button>
               </div>
-            {% endif %}
-
-            <div class="product-form__item product-form__item--submit">
-              <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if product.options.size == 1 and product.variants[0].title == 'Default Title' %} product-form__cart-submit--small{% endif %}">
-                <span id="AddToCartText-{{ section.id }}">
-                  {% unless current_variant.available %}
-                    {{ 'products.product.sold_out' | t }}
-                  {% else %}
-                    {{ 'products.product.add_to_cart' | t }}
-                  {% endunless %}
-                </span>
-              </button>
             </div>
           </form>
 
         </div>
-       
 
-       
+        <div class='product-extra__info'>
+          {{ product.description | split: '~section 2~' | last | split: '~section 3~' | first }}
+        </div>
 
-        {% if section.settings.show_share_buttons %}
+        <div class="product-extra__icons">
+          {% comment %} {{ product.description | split: '~section 2~' | last }} {% endcomment %}
+          {{ product.description | split: '~section 3~' | last }}
+        </div>
+
+      
+        {% comment %} {% if section.settings.show_share_buttons %}
           {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
-        {% endif %}
+        {% endif %} {% endcomment %}
       </div>
     </div>
   </div>
 </div>
 
-{% if collection %}
+{% comment %} {% if collection %}
   <div class="text-center return-link-wrapper">
     <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
       {% include 'icon-arrow-left' %}
       {{ 'products.product.back_to_collection' | t: title: collection.title }}
     </a>
   </div>
-{% endif %}
+{% endif %} {% endcomment %}
+
+
+
+
+
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
     {{ product | json }}
   </script>
 {% endunless %}
+
 
 {% schema %}
   {

@@ -830,6 +830,14 @@ theme.Drawers = (function() {
   return Drawer;
 })();
 
+// hack for related product infectes content located on the footer on the product page and infects under  product image 
+$(document).ready(function(){
+  var $relatedProducts = $("#shopify-section-related-products .grid-uniform").clone();
+  var $relatedProductsWrapper = $("#shopify-section-related-products-wrapper");
+
+  $($relatedProductsWrapper).append($relatedProducts);
+})
+
 
 /* ================ MODULES ================ */
 window.theme = window.theme || {};
@@ -984,6 +992,7 @@ theme.MobileNav = (function() {
 
   function init() {
     cacheSelectors();
+    collectionNavigation();
 
     cache.$mobileNavToggle.on('click', toggleMobileNav);
     cache.$subNavToggleBtn.on('click.subNav', toggleSubNav);
@@ -994,6 +1003,8 @@ theme.MobileNav = (function() {
         closeMobileNav();
       }
     });
+
+    setDropdownCollection();
   }
 
   function toggleMobileNav() {
@@ -1006,42 +1017,72 @@ theme.MobileNav = (function() {
 
   function cacheSelectors() {
     cache = {
+      $mobileMenu: $('#menu--mobile'),
       $pageContainer: $('#PageContainer'),
       $siteHeader: $('.site-header'),
       $mobileNavToggle: $('.js-mobile-nav-toggle'),
       $mobileNavContainer: $('.mobile-nav-wrapper'),
       $mobileNav: $('#MobileNav'),
       $sectionHeader: $('#shopify-section-header'),
-      $subNavToggleBtn: $('.' + classes.subNavToggleBtn)
+      $subNavToggleBtn: $('.' + classes.subNavToggleBtn),
+      $navigationCollection: $('#navigation-collection'),
+      $navigationCollectionContent: $('#navigation-collection-content'),
     };
   }
 
+  function collectionNavigation(){
+    cache.$navigationCollection.append(cache.$navigationCollectionContent)
+ 
+
+  };
+
+  function setDropdownCollection(){
+    var navigationVVVVVV = $('#navigation-collection')
+
+      var ulElement = navigationVVVVVV.find('.site-nav_chidlist-3').closest("a").addClass('KKKKKKKKKK');
+
+      // console.log(ulElement);
+
+      // ulElement.each(function(){
+      //   $(this).addClass('KKKKKKKKKK');
+      //   console.log($(this));
+      // })
+     
+    
+   
+  
+  }
+
   function openMobileNav() {
-    var translateHeaderHeight =
-      cache.$siteHeader.outerHeight() + cache.$siteHeader.position().top;
 
-    cache.$mobileNavContainer.prepareTransition().addClass(classes.navOpen);
 
-    cache.$mobileNavContainer.css({
-      transform: 'translateY(' + translateHeaderHeight + 'px)'
-    });
+    cache.$mobileMenu.addClass('menu--active');
 
-    cache.$pageContainer.css({
-      transform:
-        'translate3d(0, ' + cache.$mobileNavContainer[0].scrollHeight + 'px, 0)'
-    });
+    // var translateHeaderHeight =
+    //   cache.$siteHeader.outerHeight() + cache.$siteHeader.position().top;
 
-    slate.a11y.trapFocus({
-      $container: cache.$sectionHeader,
-      $elementToFocus: cache.$mobileNav
-        .find('.' + classes.navLinkWrapper + ':first')
-        .find('.' + classes.navLink),
-      namespace: 'navFocus'
-    });
+    // cache.$mobileNavContainer.prepareTransition().addClass(classes.navOpen);
 
-    cache.$mobileNavToggle
-      .addClass(classes.mobileNavCloseIcon)
-      .removeClass(classes.mobileNavOpenIcon);
+    // cache.$mobileNavContainer.css({
+    //   transform: 'translateY(' + translateHeaderHeight + 'px)'
+    // });
+
+    // cache.$pageContainer.css({
+    //   transform:
+    //     'translate3d(0, ' + cache.$mobileNavContainer[0].scrollHeight + 'px, 0)'
+    // });
+
+    // slate.a11y.trapFocus({
+    //   $container: cache.$sectionHeader,
+    //   $elementToFocus: cache.$mobileNav
+    //     .find('.' + classes.navLinkWrapper + ':first')
+    //     .find('.' + classes.navLink),
+    //   namespace: 'navFocus'
+    // });
+
+    // cache.$mobileNavToggle
+    //   .addClass(classes.mobileNavCloseIcon)
+    //   .removeClass(classes.mobileNavOpenIcon);
 
     // close on escape
     $(window).on('keyup.mobileNav', function(evt) {
@@ -1052,27 +1093,29 @@ theme.MobileNav = (function() {
   }
 
   function closeMobileNav() {
-    cache.$mobileNavContainer.prepareTransition().removeClass(classes.navOpen);
 
-    cache.$mobileNavContainer.css({
-      transform: 'translateY(-100%)'
-    });
+    cache.$mobileMenu.removeClass('menu--active');
+    // cache.$mobileNavContainer.prepareTransition().removeClass(classes.navOpen);
 
-    cache.$pageContainer.removeAttr('style');
+    // cache.$mobileNavContainer.css({
+    //   transform: 'translateY(-100%)'
+    // });
 
-    cache.$mobileNavContainer.one(
-      'TransitionEnd.navToggle webkitTransitionEnd.navToggle transitionend.navToggle oTransitionEnd.navToggle',
-      function() {
-        slate.a11y.removeTrapFocus({
-          $container: cache.$mobileNav,
-          namespace: 'navFocus'
-        });
-      }
-    );
+    // cache.$pageContainer.removeAttr('style');
 
-    cache.$mobileNavToggle
-      .addClass(classes.mobileNavOpenIcon)
-      .removeClass(classes.mobileNavCloseIcon);
+    // cache.$mobileNavContainer.one(
+    //   'TransitionEnd.navToggle webkitTransitionEnd.navToggle transitionend.navToggle oTransitionEnd.navToggle',
+    //   function() {
+    //     slate.a11y.removeTrapFocus({
+    //       $container: cache.$mobileNav,
+    //       namespace: 'navFocus'
+    //     });
+    //   }
+    // );
+
+    // cache.$mobileNavToggle
+    //   .addClass(classes.mobileNavOpenIcon)
+    //   .removeClass(classes.mobileNavCloseIcon);
 
     $(window).off('keyup.mobileNav');
   }
@@ -2972,3 +3015,67 @@ theme.init = function() {
 };
 
 $(theme.init);
+
+
+// Custom
+
+
+
+$( document ).ready(function() {
+  var productSingle = $(".product-single__thumbnails li a");
+  var productSingleTarget = [];
+  // var tags = $('.product-single-link-tbn a');
+  var present = 0 ;
+
+  var urls = $('.product-single-link-urls a');
+  var urlstbn =[];
+  
+  var displaArrows = function(){
+    for( i = 0; i < urls.length ; i++ ){
+      var item = $(urls[i]);
+      
+      if(i == present - 1 || i == 0 ){
+        $(item).html('<')
+       
+      } else if(i == present + 1 || i == 0 ){
+        $(item).html('>')
+      } else{
+        $(item).hide();
+      }
+    };
+  }
+  displaArrows();
+
+
+
+  $.getScript("{{ 'instafeed.min.js' | asset_url }}", function(){
+    var feed = new Instafeed({
+        get: 'user',
+        tagName: 'itsyoursole',
+        target: 'keplerweb.com',
+        userId: '399294868',
+        clientId: '5f5aa1ec23cf4d2cae03bebfe15523c3',
+        sortBy: 'most-recent',
+        limit: '12',
+        accessToken: 'adf42566996a451c9f3a1ee4e168abac',
+        template: '<div class="swiper-slide"><img src="{{image}}" /></div>',
+        resolution: 'standard_resolution'
+        
+    });
+    feed.run();
+    });
+
+  $(urls).on('click', function(event){
+    var content = $(this).html();
+    if(content == '&gt;'){
+      present ++;
+      displaArrows();
+    } else{
+      present --;
+      displaArrows();
+    }
+   
+  })
+  // console.log(productSingleTarget);
+
+});

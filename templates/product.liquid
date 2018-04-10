@@ -3,9 +3,12 @@
 {% endcomment %}
 
 {% section 'product-template' %}
-{% include 'related-products' %}
+{% comment %} {% include 'related-products' %} {% endcomment %}
 
- {% section 'related-products' %}
+
+{% section 'related-products' %}
+
+
 
 <script>
   // Override default values of shop.strings for each template.
@@ -16,4 +19,8 @@
     soldOut: {{ 'products.product.sold_out' | t | json }},
     unavailable: {{ 'products.product.unavailable' | t | json }}
   }
+
+  
+
+  
 </script>
