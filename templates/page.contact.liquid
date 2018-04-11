@@ -5,8 +5,9 @@
         <h1>{{ page.title }}</h1>
       </div>
 
+
       {% if page.content.size > 0 %}
-        <div class="rte">
+        <div class="rte contact-page">
           {{ page.content }}
         </div>
       {% endif %}
@@ -23,21 +24,25 @@
           {{ form.errors | default_errors }}
 
           <div class="grid grid--half-gutters">
-            <div class="grid__item medium-up--one-half">
-              <label for="ContactFormName">{{ 'contact.form.name' | t }}</label>
-              <input type="text" id="ContactFormName" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            <div class="grid__item medium-up--one-third">
+              {% comment %} <label for="ContactFormName">{{ 'contact.form.name' | t }}</label> {% endcomment %}
+              <input type="text" id="ContactFormName" name="contact[name]" placeholder="{{ 'contact.form.name' | t }}" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
             </div>
-            <div class="grid__item medium-up--one-half">
-              <label for="ContactFormEmail" class="{% if form.errors contains 'email' %}label--error{% endif %}">{{ 'contact.form.email' | t }}</label>
-              <input type="email" id="ContactFormEmail" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" class="{% if form.errors contains 'email' %}input--error{% endif %}">
+            <div class="grid__item medium-up--one-third ">
+              {% comment %} <label for="ContactFormEmail" class="{% if form.errors contains 'email' %}label--error{% endif %}">{{ 'contact.form.email' | t }}</label> {% endcomment %}
+              <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" class="{% if form.errors contains 'email' %}input--error{% endif %}">
             </div>
+
+             <div class="grid__item medium-up--one-third ">
+              <input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+             </div>
           </div>
 
-          <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
-          <input type="tel" id="ContactFormPhone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+          {% comment %} <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label> {% endcomment %}
+          
 
-          <label for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
-          <textarea rows="10" id="ContactFormMessage" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          {% comment %} <label for="ContactFormMessage">{{ 'contact.form.message' | t }}</label> {% endcomment %}
+          <textarea rows="10" id="ContactFormMessage" placeholder="{{ 'contact.form.message' | t }}" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
 
           <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
 

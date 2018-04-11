@@ -56,7 +56,7 @@ assets/social-twitter.svg:
 assets/theme.js:
   development: 2018-04-10T11:24:17-04:00   d4f1bfe026c3434b00b443d5cc7228f7
 assets/theme.scss.liquid:
-  development: 2018-04-10T12:16:02-04:00   49bc03c4ea157f3f511d873402df040a
+  development: 2018-04-10T23:00:11-04:00   1600c0a13748b86f979d5fea074e37c7
 assets/vendor.js:
   development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
@@ -298,7 +298,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-01-11T03:26:04-05:00   591f0b29e62cb03b2df0139a79b81caa
 templates/page.contact.liquid:
-  development: 2018-01-11T03:26:04-05:00   be1d6e8a25fded7d18eeed76cacc37b5
+  development: 2018-04-10T22:55:05-04:00   bc59ac5845adc337937a1d4d10221acf
 templates/page.liquid:
   development: 2018-02-22T00:07:30-05:00   1323607130aa3f37b15d033b013f1d71
 templates/password.liquid:
