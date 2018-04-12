@@ -166,7 +166,7 @@
            
           </div>
 
-          <form action="/cart/add" method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}">
+          <form action="/cart/add.js" method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}">
 
            {% if section.settings.show_quantity_selector %}
               <div class="product-form__item product-form__item--quantity">
@@ -249,15 +249,13 @@
 {% endif %} {% endcomment %}
 
 
-
-
-
-
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">
     {{ product | json }}
   </script>
 {% endunless %}
+
+
 
 
 {% schema %}

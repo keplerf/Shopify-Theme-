@@ -55,6 +55,11 @@
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
 
+  
+
+  <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}" async="async"></script><!--<![endif]-->
+  <!--[if lte IE 9]><script src="{{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}"></script><![endif]-->
+
   <!--[if (lte IE 9) ]>{{ 'match-media.min.js' | asset_url | script_tag }}<![endif]-->
 
   {% if template.directory == 'customers' %}
