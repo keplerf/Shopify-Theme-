@@ -54,9 +54,9 @@ assets/social-pinterest.svg:
 assets/social-twitter.svg:
   development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-04-10T11:24:17-04:00   d4f1bfe026c3434b00b443d5cc7228f7
+  development: 2018-04-25T01:11:06-04:00   d29a189e8afefbaed131313a408eb021
 assets/theme.scss.liquid:
-  development: 2018-04-11T22:55:02-04:00   70aecc2c235a6991afadc5a989d77cd5
+  development: 2018-04-25T01:12:42-04:00   b11a9bd11188b62dc61f252cf3e29b3f
 assets/vendor.js:
   development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
@@ -86,7 +86,7 @@ locales/pt-PT.json:
 sections/article-template.liquid:
   development: 2018-01-11T03:26:04-05:00   a4f113a7710f00e417d91d9c2df304c2
 sections/blog-template.liquid:
-  development: 2018-04-11T22:48:57-04:00   327d8b8beef3c62e2ad4618739f518b8
+  development: 2018-04-25T00:27:14-04:00   5313552f1529fffb6060a4db6a38225e
 sections/cart-aside-template.liquid:
   development: 2018-04-10T12:17:23-04:00   405cdd43c2b73a1b2fdc4ab6ac7bc401
 sections/cart-template.liquid:

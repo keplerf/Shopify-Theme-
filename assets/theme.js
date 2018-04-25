@@ -850,7 +850,8 @@ theme.Header = (function() {
     siteNavChildLinks: '.site-nav__child-link',
     siteNavActiveDropdown: '.site-nav--active-dropdown',
     siteNavLinkMain: '.site-nav__link--main',
-    siteNavChildLink: '.site-nav__link--last'
+    siteNavChildLink: '.site-nav__link--last',
+    article__author: '.article__author'
   };
 
   var config = {
@@ -862,6 +863,7 @@ theme.Header = (function() {
 
   function init() {
     cacheSelectors();
+    
 
     cache.$parents.on('click.siteNav', function(evt) {
       var $el = $(this);
@@ -874,7 +876,7 @@ theme.Header = (function() {
 
       showDropdown($el);
     });
-
+    
     // check when we're leaving a dropdown and close the active dropdown
     $(selectors.siteNavChildLink).on('focusout.siteNav', function() {
       setTimeout(function() {
@@ -889,6 +891,8 @@ theme.Header = (function() {
       });
     });
 
+   
+
     // close dropdowns when on top level nav
     cache.$topLevel.on('focus.siteNav', function() {
       if (cache.$activeDropdown.length) {
@@ -900,6 +904,22 @@ theme.Header = (function() {
       // Prevent click on body from firing instead of link
       evt.stopImmediatePropagation();
     });
+
+    // console.log($('.article__author'));
+    var article__author = $('.article__author')
+    for (var i = 0; i < article__author.length; i++ ){
+      var text1 = $(article__author[i]).html().slice(0, 2);
+      var text2 = $(article__author[i]).html().slice(3);
+      console.log('text 1:' + text1);
+      console.log('text 2:' + text2);
+
+      var newContent = "<span class='article__author--light'>" + text1 + " </span>" + text2 ;
+
+      $(article__author[i]).html(newContent);
+      
+    }
+    
+
   }
 
   function cacheSelectors() {
@@ -908,9 +928,11 @@ theme.Header = (function() {
       $topLevel: $(selectors.siteNavLinkMain),
       $parents: $(selectors.navigation).find(selectors.siteNavHasDropdown),
       $subMenuLinks: $(selectors.siteNavChildLinks),
-      $activeDropdown: $(selectors.siteNavActiveDropdown)
+      $activeDropdown: $(selectors.siteNavActiveDropdown),
+      $article__author: $(selectors.article__author)
     };
   }
+
 
   function showDropdown($el) {
     $el.addClass(config.activeClass);
