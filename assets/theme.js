@@ -910,9 +910,6 @@ theme.Header = (function() {
     for (var i = 0; i < article__author.length; i++ ){
       var text1 = $(article__author[i]).html().slice(0, 2);
       var text2 = $(article__author[i]).html().slice(3);
-      console.log('text 1:' + text1);
-      console.log('text 2:' + text2);
-
       var newContent = "<span class='article__author--light'>" + text1 + " </span>" + text2 ;
 
       $(article__author[i]).html(newContent);

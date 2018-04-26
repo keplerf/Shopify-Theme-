@@ -54,7 +54,7 @@ assets/social-pinterest.svg:
 assets/social-twitter.svg:
   development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-04-25T01:11:06-04:00   d29a189e8afefbaed131313a408eb021
+  development: 2018-04-25T01:25:52-04:00   91dc26c72a081afd16143ed20634ce87
 assets/theme.scss.liquid:
   development: 2018-04-25T01:12:42-04:00   b11a9bd11188b62dc61f252cf3e29b3f
 assets/vendor.js:
