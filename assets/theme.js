@@ -851,7 +851,8 @@ theme.Header = (function() {
     siteNavActiveDropdown: '.site-nav--active-dropdown',
     siteNavLinkMain: '.site-nav__link--main',
     siteNavChildLink: '.site-nav__link--last',
-    article__author: '.article__author'
+    article__author: '.article__author',
+    shopifyArticle: '.shopify-section-article-template'
   };
 
   var config = {
@@ -863,7 +864,12 @@ theme.Header = (function() {
 
   function init() {
     cacheSelectors();
+
+    // function ArttileFirstLater( ){
+       
+    // }
     
+    // ArttileFirstLater();
 
     cache.$parents.on('click.siteNav', function(evt) {
       var $el = $(this);
@@ -915,8 +921,6 @@ theme.Header = (function() {
       $(article__author[i]).html(newContent);
       
     }
-    
-
   }
 
   function cacheSelectors() {
@@ -926,7 +930,8 @@ theme.Header = (function() {
       $parents: $(selectors.navigation).find(selectors.siteNavHasDropdown),
       $subMenuLinks: $(selectors.siteNavChildLinks),
       $activeDropdown: $(selectors.siteNavActiveDropdown),
-      $article__author: $(selectors.article__author)
+      $article__author: $(selectors.article__author),
+      $shopifyArticle: $(selectors.shopifyArticle)
     };
   }
 
@@ -1012,6 +1017,9 @@ theme.MobileNav = (function() {
   function init() {
     cacheSelectors();
     collectionNavigation();
+
+     var text = $('.shopify-section-article-template .rte p').text();
+     console.log(text)
 
     cache.$mobileNavToggle.on('click', toggleMobileNav);
     cache.$subNavToggleBtn.on('click.subNav', toggleSubNav);

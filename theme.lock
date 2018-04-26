@@ -13,6 +13,8 @@ assets/banner-matress-topper-montreal-linnens-new.jpg:
   development: 2018-04-09T21:35:07-04:00   bd60a2aa8089823f39b757f0ef35b2da
 assets/banner-matress-topper-montreal-linnens-new2.jpg:
   development: 2018-04-09T21:36:30-04:00   ca7b41968be93e368c9e077932249f24
+assets/blog.jpg:
+  development: 2018-04-25T20:48:48-04:00   f9d253510ea6012bc885a1249704cd66
 assets/bullets-2.png:
   development: 2018-01-11T23:14:17-05:00   208e649ac5a7e0daf2023e30d92f675e
 assets/bullets.png:
@@ -54,9 +56,9 @@ assets/social-pinterest.svg:
 assets/social-twitter.svg:
   development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-04-25T01:25:52-04:00   91dc26c72a081afd16143ed20634ce87
+  development: 2018-04-25T21:49:53-04:00   1eeb756d3c21321e048dea1ad51cb399
 assets/theme.scss.liquid:
-  development: 2018-04-25T01:12:42-04:00   b11a9bd11188b62dc61f252cf3e29b3f
+  development: 2018-04-26T01:21:06-04:00   ae7d5aacc09aec89218918c225bfc714
 assets/vendor.js:
   development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
@@ -84,7 +86,7 @@ locales/pt-BR.json:
 locales/pt-PT.json:
   development: 2017-12-08T00:36:53-05:00   9753246c7cfeeb72638f4df3170e0566
 sections/article-template.liquid:
-  development: 2018-01-11T03:26:04-05:00   a4f113a7710f00e417d91d9c2df304c2
+  development: 2018-04-26T00:45:27-04:00   ead3f1ffe694210fd4dcfe163444d055
 sections/blog-template.liquid:
   development: 2018-04-25T00:27:14-04:00   5313552f1529fffb6060a4db6a38225e
 sections/cart-aside-template.liquid:
@@ -94,7 +96,7 @@ sections/cart-template.liquid:
 sections/collection-list.liquid:
   development: 2018-01-15T12:56:04-05:00   a55d61b95ff71917adad276c41ee1dc0
 sections/collection-template.liquid:
-  development: 2018-04-09T21:41:35-04:00   9707303396959dc68170caafa54a3e16
+  development: 2018-04-26T01:24:43-04:00   225a3a5ec06a69a1ae4de5277f0324e7
 sections/collection.liquid:
   development: 2017-12-08T00:36:51-05:00   2b354ddc56741c41be0ee62a912b4ce4
 sections/custom-content.liquid:
@@ -270,7 +272,7 @@ snippets/social-sharing.liquid:
 templates/404.liquid:
   development: 2018-01-11T03:26:03-05:00   1e0680275b18aa08d5e182cc51f96e1d
 templates/article.liquid:
-  development: 2018-01-11T03:26:03-05:00   397bd8744b147cb8d0e6daad54f004cb
+  development: 2018-04-26T00:03:40-04:00   43e3260d28ec7fd81d4b6c8ef495f89b
 templates/blog.liquid:
   development: 2018-01-11T03:26:04-05:00   02bd6c5a55d29139ba1933e3ee8b149d
 templates/cart.liquid:

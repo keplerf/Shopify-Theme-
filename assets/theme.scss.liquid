@@ -1297,12 +1297,17 @@ html {
   margin-bottom: 110px;
 
   @include media-query($medium-up) {
-    padding-top: $section-spacing;
+    padding-top: 0;
   }
 }
 
 .section-header {
   margin-bottom: $section-spacing-small;
+
+  @include media-query($small) {
+    margin-bottom: 105px;
+    margin-top: -70px;
+  }
 
   &::after{
     content:'';
@@ -1907,9 +1912,53 @@ a[href^="tel"] {
   border-color: $color-border;
 }
 
+#shopify-section-article-template{
+  & > .rte {
+    em:first-child {
+      font-size: 30px;
+      display: inline-block;
+      color: white;
+      background: black;
+      padding: 5px 13px;
+      float: left;
+      margin: 0 8px 2px 0;
+      font-style: inherit;
+    }
+      padding-bottom: $section-spacing;
+     margin-bottom: $section-spacing / 2;
+     border-bottom: solid 1px #f5f5f5;
+  }
+  .article__tags{
+    font-size: 13px;
+    
+    padding-top: $grid-gutter / 2;
+    strong{
+      font-weight: inherit;
+      color: black;
+    }
+  }
+
+  .blog-navigation{
+    padding-top: $grid-gutter;
+    a{
+      display: block;
+      padding:10px;
+      text-align: center;
+      width: 100%;
+      border: solid 1px ;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+  }
+
+  
+ 
+
+}
+
 .btn--small {
   font-family: $font-stack-body;
-  padding: 8px 10px;
+  padding: 8px 6px;
   font-size: em(12);
   line-height: 1;
 }
@@ -4310,10 +4359,14 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .article__tags {
-  margin-bottom: 8.5px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
 
   a{
     color: #788188;
+    
   }
   
 }
@@ -4332,6 +4385,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .article__grid-tag {
   margin-right: 10px;
+  
 }
 
 .article__grid-meta {
@@ -4494,8 +4548,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
   .icon {
     vertical-align: middle;
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
     margin-right: 4px;
   }
 
@@ -5500,7 +5554,7 @@ $toolbar-height-small: 46px;
 }
 
 .site-footer {
-  margin: $section-spacing 0;
+  // margin: $section-spacing 0;
 
   @include media-query($small) {
     text-align: center;
@@ -6304,6 +6358,10 @@ $toolbar-height-small: 46px;
   background-position: center top;
 }
 
+#navigation-collection{
+  padding-bottom: $grid-gutter;
+}
+
 .template-collection{
   .main-content{
     padding-top: 0px;
@@ -6327,10 +6385,15 @@ $toolbar-height-small: 46px;
     margin-bottom: 65px;
   }
 
+
   #customHeaderK{
     height: 340px;
     background: url("banner-matress-topper-montreal-linnens-new2.jpg") no-repeat;
     background-size: 100% auto;
+
+    @include media-query($medium-down) {
+      background-size: auto 100%;
+    }
 
     &:after{
     content: ' Make your whole bed like the cool side of the pillow with our Signature long-staple contton precale sheets';
@@ -6346,6 +6409,12 @@ $toolbar-height-small: 46px;
     font-weight: normal;
     max-width: 708px;
     line-height: initial;
+
+     @include media-query($small) {
+        width: 82%;
+        font-size: 14px;
+        letter-spacing: 1px;
+     }
     }
   }
 
@@ -6360,6 +6429,10 @@ $toolbar-height-small: 46px;
       text-transform: uppercase;
       font-weight: bold;
       padding-top: 30px;
+      @include media-query($small) {
+        font-size: 30px;
+        padding-top: 60px;
+      }
     }
   }
 
@@ -6398,10 +6471,72 @@ $toolbar-height-small: 46px;
     height: 280px;
     background: url("banner-contact.jpg") no-repeat;
     background-size: 100% auto;
+
+    @include media-query($small) {
+      height: 380px;
+       background-size: auto 100%;
+    }
   }
   .page-container {
     margin-top: -173px;
   }
+}
+.social-sharing{
+  text-align: right;
+  .share-title{
+    display: none;
+  }
+  a{
+    border: none;
+  }
+}
+
+.template-article{
+  h1 {
+   display: none;
+    &:after {
+      display: none;
+    }
+  }
+  .main-content{
+    padding-top: 0;
+  }
+  
+
+  .section-header {
+    &:after {
+      display: none;
+    }
+  }
+
+  .page-container {
+    margin-top: -173px;
+  }
+  .site-header{
+    background: #373735;
+  }
+
+  #customHeaderK {
+    height: 280px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#adadad+0,ffffff+90,ffffff+100 */
+
+    background: rgb(173, 173, 173);
+    /* Old browsers */
+
+    background: -moz-radial-gradient(center, ellipse cover, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+    /* FF3.6-15 */
+
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+
+    background: radial-gradient(ellipse at center, rgba(173, 173, 173, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#ffffff', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    
+  }
+
 }
 
 .template-blog {
@@ -6412,7 +6547,8 @@ $toolbar-height-small: 46px;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    padding-top: 30px;
+    padding-top:0px;
+    padding-bottom: 71px;
      &:after {
        display: none;
      }
@@ -6429,7 +6565,7 @@ $toolbar-height-small: 46px;
 
     #customHeaderK {
       height: 280px;
-      background: url("banner-contact.jpg") no-repeat;
+      background: url("blog.jpg") no-repeat;
       background-size: 100% auto;
     }
 }
