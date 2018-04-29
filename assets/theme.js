@@ -864,12 +864,15 @@ theme.Header = (function() {
 
   function init() {
     cacheSelectors();
+    cacheNaScroll()
 
     // function ArttileFirstLater( ){
        
     // }
     
     // ArttileFirstLater();
+
+    
 
     cache.$parents.on('click.siteNav', function(evt) {
       var $el = $(this);
@@ -921,6 +924,13 @@ theme.Header = (function() {
       $(article__author[i]).html(newContent);
       
     }
+  }
+
+  function cacheNaScroll(){
+    $(document).scroll(function () {
+      var $nav = $(".site-header");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
   }
 
   function cacheSelectors() {

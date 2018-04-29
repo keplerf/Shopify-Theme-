@@ -129,7 +129,7 @@
           <p itemprop="brand" class="product-single__vendor">{{ product.vendor }}</p>
         {% endif %} {% endcomment %}
 
-        <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <div class='custom-offer-wrapper' itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
 
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">

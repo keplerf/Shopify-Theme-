@@ -564,8 +564,7 @@ $slick-opacity-not-active: 0.25;
     &:hover{
       .site-nav_chidlist-3{
         display: block;
-        display: flex;
-        
+       @include display-flexbox;
       }
 
     }
@@ -1636,9 +1635,14 @@ li {
 #topMainHeader-wrapper {
    @include media-query($small) {
      position: fixed;
+     top:0 ;
    }
    .template-collection &{
     background: #d6d6d6;
+   }
+
+   .template-product &{
+     background: #3d4246;
    }
 
 }
@@ -2955,7 +2959,7 @@ hr {
 @include media-query($small) {
   .grid-view-item__title,
   .grid-view-item__meta {
-    font-size: 1.5em;
+    font-size: 1.3em;
     
   }
 }
@@ -7715,3 +7719,87 @@ h3{
 
   }
 }
+ @include media-query($small) {
+  .product-single__title{
+    text-align: center;
+    
+  }
+  .custom-offer-wrapper{
+    @include display-flexbox;
+
+     -webkit-flex-flow: row wrap;
+     justify-content: space-around;
+     margin-top: 30px;
+
+     .product-form {
+       display: inline;
+       width: 100%;
+       & > .product-form__item {
+         width: 100%;
+         &:first-child {
+           width: 50%;
+           float: right;
+           margin-left: 50%;
+         }
+         label {
+           margin: 22px 0 12px 0;
+         }
+       }
+     }
+    
+  }
+
+  .product-single__price-product-template{
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    left: 10px;
+    margin-top: 20px;
+  }
+  
+  .template-product .product-form__input{
+    font-size: 19px;
+    padding: 18px 13px;
+  }
+  .template-product #AddToCart-product-template{
+    font-size: 18px;
+    padding: 22px 0;
+  }
+
+  .product-single__description{
+    order: 3;
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .template-product .product-extra__info {
+    font-size: 1.5em;
+  }
+  .template-product .product-extra__icons {
+    font-size: 1.3em;
+    p{
+      position: relative;
+      padding-left: 81px;
+      margin-bottom: 61px;
+    }
+
+    img{
+      margin-top:10px;
+      margin-bottom:10px;
+      position: absolute;
+      width: 47px;
+      left: 0;
+      top: 0;
+    }
+
+    span{
+          
+          line-height: 1;
+    }
+  }
+  .scrolled{
+    background: #363635;
+    transition: background-color 200ms linear;
+  }
+ }
+ 

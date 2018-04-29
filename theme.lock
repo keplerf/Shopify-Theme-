@@ -56,9 +56,9 @@ assets/social-pinterest.svg:
 assets/social-twitter.svg:
   development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-04-27T15:01:48-04:00   2304799a79dfd4b458f79534e55dbee4
+  development: 2018-04-29T14:41:22-04:00   a238752947803a0bf9058a38dfacdc94
 assets/theme.scss.liquid:
-  development: 2018-04-29T12:04:56-04:00   e4af177cebddaef3bcd1c11b0a0e3f55
+  development: 2018-04-29T14:43:06-04:00   1d1c7bd27a211f74647923f2f07d2add
 assets/vendor.js:
   development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
@@ -132,7 +132,7 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-01-11T03:26:05-05:00   ccc1f51a9ddd61dcda8e8037319c2f87
 sections/product-template.liquid:
-  development: 2018-04-29T12:21:16-04:00   10bfc3f0c2469453f3baf4f2827b5185
+  development: 2018-04-29T12:35:27-04:00   47cd30d6b36716b233ca7d95f5e29bc1
 sections/quotes.liquid:
   development: 2018-01-11T03:26:05-05:00   df3263eeebad4c2cd54683984280dca7
 sections/related-products.liquid:
