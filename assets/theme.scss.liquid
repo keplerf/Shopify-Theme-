@@ -6611,7 +6611,7 @@ $toolbar-height-small: 46px;
     }
   }
   .page-container {
-    margin-top: -173px;
+    margin-top: -140px;
   }
 
     #customHeaderK {
@@ -7683,4 +7683,35 @@ h3{
 
 .blog-container{
   padding: 50px 0;
+}
+
+.blog-navigation .small--one-half,
+.shopify-section-article-template {
+  @include media-query($small) {
+    width: 50%;
+  }
+}
+.social-sharing{
+  &:before{
+    display: inline-block;
+    content: 'SHARE: ';
+    margin-right: 10px;
+
+  }
+}
+
+.social-and-tag{
+  .medium-up--one-half{
+     @include media-query($small) {
+       width: 100%;
+       text-align: center;
+       .social-sharing{
+         margin-top: 30px;
+       }
+       .social-sharing{
+         text-align: center;
+       }
+     }
+
+  }
 }

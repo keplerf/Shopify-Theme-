@@ -16,9 +16,9 @@
 <div class="rte" itemprop="articleBody">
   {{ article.content }}
 </div>
-<div class='grid'>
-  <div class="grid__item medium-up--one-half">
-  {% if article.tags.size > 0 %}
+<div class='grid social-and-tag' >
+  <div class="grid__item medium-up--one-half ">
+  
       <div class="article__tags ">
       <strong> Tag: </strong>
         {% for tag in article.tags %}
@@ -26,7 +26,7 @@
         {% endfor %}
       </div>
     
-    {% endif %}
+    
   </div>
 
   <div class="grid__item medium-up--one-half">
@@ -38,13 +38,13 @@
 
 
 <div class='blog-navigation grid'>
-  <div class="grid__item medium-up--one-half text-center">
+  <div class="grid__item medium-up--one-half small--one-half text-center">
     <a href="" class=" btn--has-icon-before return-link">
       {% include 'icon-arrow-left' %}
       Next  
     </a>
   </div>
-  <div class="grid__item medium-up--one-half text-center">
+  <div class="grid__item medium-up--one-half small--one-half text-center">
     <a href="" class=" btn--has-icon-after return-link">
       Prev
       {% include 'icon-arrow-right' %}
