@@ -56,9 +56,9 @@ assets/social-pinterest.svg:
 assets/social-twitter.svg:
   development: 2018-02-22T22:40:22-05:00   2bd07ce6bd0f8dbbb4373bd62f7539bb
 assets/theme.js:
-  development: 2018-04-25T21:49:53-04:00   1eeb756d3c21321e048dea1ad51cb399
+  development: 2018-04-27T15:01:48-04:00   2304799a79dfd4b458f79534e55dbee4
 assets/theme.scss.liquid:
-  development: 2018-04-26T01:21:06-04:00   ae7d5aacc09aec89218918c225bfc714
+  development: 2018-04-28T19:48:47-04:00   3dcd5f0a15a08853b711d57ef1a4392f
 assets/vendor.js:
   development: 2018-02-26T22:20:32-05:00   deba887303d9ab5c23f73c3698e868e3
 config/settings_schema.json:
@@ -88,7 +88,7 @@ locales/pt-PT.json:
 sections/article-template.liquid:
   development: 2018-04-26T00:45:27-04:00   ead3f1ffe694210fd4dcfe163444d055
 sections/blog-template.liquid:
-  development: 2018-04-25T00:27:14-04:00   5313552f1529fffb6060a4db6a38225e
+  development: 2018-04-28T19:49:01-04:00   3e36b5b4522d77eed55bc41222d4dce1
 sections/cart-aside-template.liquid:
   development: 2018-04-10T12:17:23-04:00   405cdd43c2b73a1b2fdc4ab6ac7bc401
 sections/cart-template.liquid:
@@ -112,7 +112,7 @@ sections/featured-product.liquid:
 sections/footer.liquid:
   development: 2018-01-15T01:20:29-05:00   5aad0b30edaf772d7c7f230fd67f1196
 sections/header.liquid:
-  development: 2018-02-28T22:10:00-05:00   cbffb43024f0f97cd262c256fa322096
+  development: 2018-04-28T18:58:52-04:00   4bcb17c4f42c4c50991137d46de80022
 sections/hero.liquid:
   development: 2018-01-11T03:26:04-05:00   d7ce7b9dbaa78bf494562f4c7c9e3856
 sections/image-bar.liquid:
@@ -296,7 +296,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2018-01-11T03:26:04-05:00   746bbea7dc4e244df4f43a48fccb4bc3
 templates/index.liquid:
-  development: 2018-02-22T00:26:43-05:00   ebff78634fcbc48789cd65310585fb2c
+  development: 2018-04-29T11:16:01-04:00   afd65644fa0cf351c2dcc7fe8e1dc9df
 templates/list-collections.liquid:
   development: 2018-01-11T03:26:04-05:00   591f0b29e62cb03b2df0139a79b81caa
 templates/page.contact.liquid:

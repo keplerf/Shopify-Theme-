@@ -512,6 +512,8 @@ $slick-opacity-not-active: 0.25;
   transform: translate3d(0, 0, 0);
 }
 
+
+
 .site-nav_chidlist-3{
   display: flex;
   display: none;
@@ -1449,7 +1451,7 @@ h2 {
   letter-spacing: 0.1em;
 
   @include media-query($small) {
-    font-size: em(floor(($font-size-header * 0.78) * 0.9));
+    font-size: em(floor(($font-size-header * 1.28) * 0.9));
   }
 }
 
@@ -1630,6 +1632,18 @@ li {
 }
 
 /*================ Hero and slideshow headers ================*/
+
+#topMainHeader-wrapper {
+   @include media-query($small) {
+     position: fixed;
+   }
+   .template-collection &{
+    background: #d6d6d6;
+   }
+
+}
+
+
 .mega-title,
 .mega-subtitle {
   text-shadow: 0 0 15px $color-text-shadow;
@@ -1704,7 +1718,7 @@ symbol {
   padding: 50px; 
 
   @include media-query($small) {
-    padding: 10px; 
+    padding: 30px 10px; 
   }
 
   a{
@@ -1712,9 +1726,15 @@ symbol {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
+     @include media-query($small) {
+        font-size: 18px;
+     }
   }
   .site-footer__linklist-item{
     padding: 3px 26px;
+     @include media-query($small) {
+      padding: 14px 26px;
+     }
   }
 
   .site-footer__linklist{
@@ -1752,6 +1772,9 @@ symbol {
 }
 
 /*================ Social Icons ================*/
+
+
+
 .social-icons .icon {
   width: 23px;
   height: 23px;
@@ -1759,6 +1782,11 @@ symbol {
   @include media-query($medium-up) {
     width: 25px;
     height: 25px;
+  }
+
+  @include media-query($small) {
+    width: 33px;
+    height: 33px;
   }
 
   &.icon--wide {
@@ -2927,7 +2955,8 @@ hr {
 @include media-query($small) {
   .grid-view-item__title,
   .grid-view-item__meta {
-    font-size: em($font-size-base - 1px);
+    font-size: 1.5em;
+    
   }
 }
 
@@ -2960,9 +2989,10 @@ hr {
     text-align: right;
     font-size: 14px;
     padding-left: 140px;
+   
 
     @include media-query($small) {
-      padding-left: 0px;
+      padding: 0 46px;
       text-align: center;
 
     }
@@ -4098,6 +4128,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
     @include media-query($small) {
       height: 44px;
+      line-height: 0;
     }
 
   h1{
@@ -5198,6 +5229,10 @@ $color-slideshow-close-text: #000;
       margin-top: 10px;
       color: white;
       text-transform: uppercase;
+       @include media-query($medium-up) {
+         font-size: 2.033em;
+       }
+      
   }
 }
 
@@ -5205,6 +5240,9 @@ $color-slideshow-close-text: #000;
   letter-spacing: 2px;
   line-height: 1;
   font-size: 4.033em;
+  @include media-query($small) {
+    font-size: 2.033em;
+  }
 }
 
 /*================ Video styles ================*/
@@ -5645,6 +5683,9 @@ $toolbar-height-small: 46px;
 .social-icons__link {
   display: block;
   padding: 0 3px;
+  @include media-query(small) {
+    margin: 0 15px;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -5877,9 +5918,15 @@ $toolbar-height-small: 46px;
 
     a{
       font-size: 14px;
+      @include media-query($small) {
+         font-size: 15px;
+      }
       // fixing
       letter-spacing: 3px;
     }
+
+    
+
 
   }
   .mega-subtitle{
@@ -6391,6 +6438,10 @@ $toolbar-height-small: 46px;
     background: url("banner-matress-topper-montreal-linnens-new2.jpg") no-repeat;
     background-size: 100% auto;
 
+    @include media-query($small) {
+      height: 560px;
+    }
+
     @include media-query($medium-down) {
       background-size: auto 100%;
     }
@@ -6431,7 +6482,7 @@ $toolbar-height-small: 46px;
       padding-top: 30px;
       @include media-query($small) {
         font-size: 30px;
-        padding-top: 60px;
+        padding-top: 210px;
       }
     }
   }
@@ -6614,12 +6665,7 @@ $toolbar-height-small: 46px;
     }
   }
 
-  .template-index &{
-    a{
-      font-size: 12px;
-    }
-
-  }
+  
   
 
   .collection-grid-item {
@@ -6872,7 +6918,7 @@ Default Theme
 .featureBundle h2.h3{
   @include media-query($small) {
     text-align: center;
-    font-size: 16px;
+    font-size: 22px;
   }
 }
 .featureBundle{
@@ -6893,6 +6939,13 @@ Default Theme
       float: none;
       margin: 0 auto;
     }
+  }
+
+  .feature-row__image-wrapper{
+    @include media-query($small) {
+      margin-bottom: 0;
+    }
+
   }
 
 }
@@ -7513,6 +7566,60 @@ preview-2
   }
 }
 
+.template-index{
+  a {
+    font-size: 12px;
+  }
+  .grid-view-item {
+    &.small--one-half {
+       @include media-query($small) {
+        width: 100%;
+      }
+    }
+  }
+   @include media-query($small) {
+
+    .page-container{
+      margin-top: 0;
+    }
+    .feature-row .featureBundle{
+      padding-bottom: 20px;
+
+      .feature-row__image-wrapper{
+        img {
+          
+            width: 60% !important;
+            margin-left:19%;
+        }
+      }
+    }
+
+    .featureBundle .feature-row__text--left{
+       padding: 0 20px;
+    }
+    .shopify-section .section-header {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
+    .custom-content{
+      .small--one-half{
+         width: 100%;
+         @include flex(1 0 100%);    
+      }
+    }
+
+   
+  }
+}
+
+.grid__item.small--one-half{
+    @include media-query($small) {
+      width: 100%;
+      font-size: 20px;
+    }
+}
+
+
 
 #shopify-section-header{
 
@@ -7523,7 +7630,57 @@ preview-2
     }
 
   }
+}
 
-  
 
+  .template-index{
+    .custom-content{
+      .custom__item {
+       @include media-query($small) {
+        padding-bottom: 53px !important;
+       }
+      }
+    }
+  }
+
+
+.template-index a{
+   @include media-query($small) {
+      font-size: 15px;
+   }
+
+}
+h3{
+   @include media-query($small) {
+    font-size: 1.45em;
+   }
+}
+
+
+.site-footer__social-icons {
+  @include media-query($small) {
+    margin: 55px 0;
+  }
+}
+
+#shopify-section-footer .site-footer__copyright {
+  .site-footer__copyright-content{
+     font-size: 12px;
+  }
+ 
+  a{
+    @include media-query($small) {
+      font-size: 12px;
+    }
+  }
+}
+
+#shopify-section-footer .site-footer__copyright .site-footer__copyright-content {
+  @include media-query($small) {
+    padding: 0;
+  }
+}
+
+.blog-container{
+  padding: 50px 0;
 }

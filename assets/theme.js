@@ -1059,8 +1059,6 @@ theme.MobileNav = (function() {
 
   function collectionNavigation(){
     cache.$navigationCollection.append(cache.$navigationCollectionContent)
- 
-
   };
 
   function setDropdownCollection(){
@@ -1068,15 +1066,6 @@ theme.MobileNav = (function() {
 
       var ulElement = navigationVVVVVV.find('.site-nav_chidlist-3').closest("a").addClass('KKKKKKKKKK');
 
-      // console.log(ulElement);
-
-      // ulElement.each(function(){
-      //   $(this).addClass('KKKKKKKKKK');
-      //   console.log($(this));
-      // })
-     
-    
-   
   
   }
 
