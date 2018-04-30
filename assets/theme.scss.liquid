@@ -1599,7 +1599,7 @@ p {
   margin: 0 0 ($section-spacing-small / 1.8);
 
   @include media-query($small) {
-    font-size: em($font-size-base - 1);
+    font-size: em($font-size-base + 3);
   }
 
   &:last-child {
@@ -1908,6 +1908,7 @@ a[href^="tel"] {
   border-radius: $border-radius;
   padding: $input-padding-top-bottom-small $input-padding-left-right-small;
   background-color: $color-btn-primary;
+  background-color: #3d4246;
   color: $color-btn-primary-text;
   font-family: $font-stack-header;
   font-weight: $font-weight-header;
@@ -1916,9 +1917,16 @@ a[href^="tel"] {
   white-space: normal;
   font-size: $font-size-base - 2;
 
+  @include media-query($small) {
+    font-size: 18px;
+    padding: 22px 0;
+  }
+
   @include media-query($medium-up) {
     padding: $input-padding-top-bottom $input-padding-left-right;
   }
+
+  
 
   &:hover,
   &:focus {
@@ -2442,7 +2450,7 @@ textarea {
   .btn {
     // display: inline-block;
     width: auto;
-    background: #363635;
+    background: #3d4246;
     margin: 0 auto;
   }
 }
@@ -5488,6 +5496,9 @@ $toolbar-height-small: 46px;
     letter-spacing: 1px;
     font-size: 8px;
     margin-top: 42px;
+    @include media-query($small) {
+      font-size:em($font-size-base);
+    }
   }
 
   &:before {
@@ -6411,6 +6422,29 @@ $toolbar-height-small: 46px;
 
 #navigation-collection{
   padding-bottom: $grid-gutter;
+}
+
+.template-cart{
+
+  .section-header {
+    padding-top:10px;
+    margin-bottom: 0px;
+      &:after{
+      display: none;
+      }
+  }
+
+  #customHeaderK {
+    height: 50px;
+    // background: url("banner-matress-topper-montreal-linnens-new2.jpg") no-repeat;
+    // background-size: 100% auto;
+    
+   
+    @include media-query($medium-down) {
+      background-size: auto 100%;
+    }
+  }
+
 }
 
 .template-collection{
